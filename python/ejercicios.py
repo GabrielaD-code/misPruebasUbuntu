@@ -247,26 +247,128 @@ else:
 
 #Clase 26: Proyecto: prueba de primalidad
 #..Números primos: sólo divisibles entre si mismos y 1
-def es_primo(numero):
-    contador = 0
+#def es_primo(numero):
+#    contador = 0
+#
+#    for i in range(1, numero + 1):
+#        if i == 1 or i == numero:
+#            continue
+#        if numero % i == 0:
+#            contador += 1
+#    if contador == 0:
+#        return True
+#    else: 
+#        return False
+#
+#
+#def run():
+#    numero = int(input('Escribe un número: '))
+#    if es_primo(numero):
+#        print('Es primo')
+#    else:
+#        print('No es primo')
+#
+#
+#if __name__ == '__main__':
+#    run()
 
-    for i in range(1, numero + 1):
-        if i == 1 or i == numero:
-            continue
-        if numero % i == 0:
-            contador += 1
-    if contador == 0:
-        return True
-    else: 
-        return False
+#Clase 27:Proyecto: videojuego Adivina el número 
+#import random
+#
+#def run():
+#    numero_aleatorio = random.randint(1,100)
+#    numero_elegido = int(input('Elige un número entre 1 y 100:'))
+#    while numero_elegido != numero_aleatorio:
+#        if numero_elegido < numero_aleatorio:
+#            print('Es más grande')
+#        else:
+#            print('Es más chico')
+#        numero_elegido = int(input('Elige otro número: '))
+#    print('¡Ganaste!')
+#
+#
+#if __name__ == '__main__':
+#    run()
+
+#Clase 30: Qué son los diccionarios
+#def run():
+#    mi_diccionario = {
+#        'llave1' : 1,
+#        'llave2' : 2,
+#        'llave3' : 3
+#    }
+#
+#    poblacion_paises = {
+#        'Argentina' : 44938712,
+#        'Brasil' : 210147125,
+#        'Colombia' : 50372424
+#    }
+#
+#    print(mi_diccionario['llave2'])
+#    print(' ')
+#    for mivalor in mi_diccionario.values():
+#        print(mivalor)
+#    print(' ')
+#    for llave in mi_diccionario.keys():
+#        print(llave)
+#    print(' ')
+#    for millave, numero in mi_diccionario.items():
+#        print(millave + ' su valor es: ' + str(numero))
+#    print(' ')
+#    for pais, poblacion in poblacion_paises.items():
+#        print(pais + ' tiene: ' + str(poblacion) + ' habitantes')
+#
+#
+#if __name__ == '__main__':
+#    run()
+
+#Clase 31: proyecto: generador:contrasena.py
+#import random
+#
+#def generar_contrasena():
+#    MAYUSCULAS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'X', 'Y', 'Z']
+#    MINUSCULAS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'x', 'y', 'z']
+#    NUMEROS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+#    CHARS = ['*', '+', '-', '/', '@', '_', '?', '!', '[', '{', '(', ')', '}', ']', ',', ';', '.', '>', '<', '~', '°', '^', '&', '$', '#', '"']
+#
+#    caracteres = MAYUSCULAS + MINUSCULAS + NUMEROS + CHARS
+#
+#    contrasena = []
+#
+#    for i in range(15):
+#        caracter_random = random.choice(caracteres)
+#        contrasena.append(caracter_random)
+#    #ahora mi contraseña es una lista... pero yo la quiero string
+#    contrasena = ''.join(contrasena)
+#    return contrasena
+#
+#def run():
+#    contrasena = generar_contrasena()
+#    print('Tu nueva contraseña es : '+ contrasena)
+#
+#
+#if __name__ == '__main__':
+#    run()
+
+#otra forma es 
+import random
+import string
+
+
+def gen_pass():
+    password = []
+    list_char = string.ascii_lowercase + string.ascii_uppercase + string.punctuation + string.digits
+
+    while len(password) < 16:
+        chars = random.choice(list_char)
+        password.append(chars)
+    password = ''.join(password)
+    return password
 
 
 def run():
-    numero = int(input('Escribe un número: '))
-    if es_primo(numero):
-        print('Es primo')
-    else:
-        print('No es primo')
+    password = gen_pass()
+    print('Tu nueva contraseña es: ' + password)
 
 
 if __name__ == '__main__':
