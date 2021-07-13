@@ -1,0 +1,3 @@
+Pruebas de comandos y >
+
+Ojo que aquí hizo un proceso por usar > directamente me lleva a escribir el contenido de mi archivo
