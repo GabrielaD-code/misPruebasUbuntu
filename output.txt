@@ -1,1 +1,6 @@
-ls: cannot access 'Documents/': No such file or directory
+total 16K
+-rw-r--r-- 1 gabrieladr gabrieladr   53 Jul  6 20:40 archivotextoerror.txt
+drwxr-xr-x 4 gabrieladr gabrieladr 4.0K Jul  6 12:51 gits
+-rw-r--r-- 1 gabrieladr gabrieladr  157 Jul  6 20:37 misarchivo.txt
+-rw-r--r-- 1 gabrieladr gabrieladr    0 Jul  8 12:08 output.txt
+drwxr-xr-x 5 gabrieladr gabrieladr 4.0K Jul  6 20:24 terminal
